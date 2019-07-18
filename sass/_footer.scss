@@ -1,0 +1,197 @@
+.footer{
+    background: $footer-background;
+    padding: 10rem 2rem 4rem 4rem;
+    position: relative;
+    font-family: 'Raleway', sans-serif;
+
+    @include responsive__mode(phone){
+        padding: 10rem 2rem 4rem 2rem;
+    }
+
+    &__brand{
+        padding-bottom: 1.5rem;
+
+        @include responsive__mode(tablet-landscape){
+            padding-top: 3rem;
+        }
+
+        @include responsive__mode(tablet-portrait){
+            padding-top: 3rem;
+        }
+
+        @include responsive__mode(phone){
+            padding-top: 3.5rem;
+        }
+    }
+
+    &__container{
+        display: flex;
+        flex-direction: row;
+        flex-basis: 100%;
+
+        @include responsive__mode(tablet-portrait){
+            flex-wrap: wrap;
+        }
+
+        @include responsive__mode(phone){
+            display: block;
+        }
+    }
+
+    &__content{
+        flex-basis: 23%;
+        margin-right: 3.5rem;
+
+        @include responsive__mode(tablet-landscape){
+            flex-basis: 20%;
+        }
+
+        @include responsive__mode(tablet-portrait){
+            flex-basis: 35%;
+            margin-bottom: 3.5rem;
+        }
+
+        @include responsive__mode(phone){
+            margin-right: 0;
+            margin-bottom: 1.5rem;
+        }
+
+        &--icon{
+            display: flex;
+
+            & img{
+                margin-right: 0.5rem;
+                align-self: flex-start;
+                height: 20px;
+
+                @include responsive__mode(phone){
+                    margin-right: 0.7rem;
+                }
+            }
+
+            & p{
+                color: $white;
+                text-align: left;
+            }
+        }
+    }
+
+    &__contacts{
+        flex-basis: 20%;
+
+        @include responsive__mode(tablet-landscape){
+            flex-basis: 20%;
+            margin-right: auto;
+        }
+
+        @include responsive__mode(tablet-portrait){
+            flex-basis: 43%;
+            margin-bottom: 3.5rem;
+            justify-self: center;
+        }
+
+        @include responsive__mode(phone){
+            padding-bottom: 4.5rem;
+        }
+    }
+
+    &__contact{
+        color: $white;
+
+        &:not(:last-child){
+            margin-bottom: 0.5rem;
+
+            @include responsive__mode(phone){
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        &--icon{
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 1rem;
+        }
+
+        &--text{
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+
+    &__links{
+        flex-basis: 15%;
+
+        @include responsive__mode(tablet-portrait){
+            flex-basis: 25%;
+        }
+
+        &--2{
+            @include responsive__mode(phone){
+                padding-top: 2.5rem;
+                padding-bottom: 4.5rem;
+            }
+        }
+    }
+
+    &__item{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        &--list{
+            margin: 0 0 1rem 0;
+
+            & a{
+                text-decoration: none;
+                color: $white;
+                transition: all .3s;
+            }
+
+            & a:hover,
+            & a:active{
+                color: $color-primary;
+            }
+        }
+    }
+
+    &__social{
+
+        @include responsive__mode(phone){
+            text-align: center;
+        }
+
+        &  a{
+            text-decoration: none;
+        }
+
+        &--icons{
+            width: 30px;
+            height: 30px;
+            padding: 0.3rem;
+            fill: $white;
+            border: 1px solid $white;
+            border-radius: 50%;
+            margin: 0 0.8rem;
+            transition: all 0.3s;
+
+            @include responsive__mode(tablet-landscape){
+                margin: 0 0.5rem;
+            }
+
+            &:hover,
+            &:active{
+                border: 1px solid $color-primary;
+            }
+        }
+    }
+}
+
+.attribution{
+    position: absolute;
+    bottom: 2%;
+    color: $white;
+
+    @include responsive__mode(phone){
+        font-size: 0.8rem;
+    }
+}

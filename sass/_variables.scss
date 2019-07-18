@@ -1,0 +1,27 @@
+$header-background: hsl(217, 28%, 15%);
+$main-background: hsl(218, 28%, 13%);
+$footer-background: hsl(216, 53%, 9%);
+$testimonial-background: hsl(219, 30%, 18%);
+
+$color-primary: hsl(176, 68%, 64%);
+$color-secondary: hsl(198, 60%, 50%);
+
+$white: hsl(0, 0%, 100%);
+
+@mixin responsive__mode($breakpoint) {
+    @if($breakpoint == phone){
+        @media only screen and (max-width: 31.25em){@content};
+    }
+
+    @if($breakpoint == tablet-portrait){
+        @media only screen and (max-width: 53.13em){@content};
+    }
+
+    @if($breakpoint == tablet-landscape){
+        @media only screen and (max-width: 65.63em){@content};
+    }
+
+    @if($breakpoint == desktop){
+        @media only screen and (max-width: 90em){@content};
+    }
+}

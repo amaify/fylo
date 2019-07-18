@@ -1,0 +1,51 @@
+.heading-1{
+    color: $white;
+    padding-bottom: 2rem;
+    font-family: 'Raleway', sans-serif;
+
+    @include responsive__mode(phone){
+        padding: 1.5rem 1.5rem 1rem 1.5rem;
+    }
+
+    &--one{
+        display: block;
+    }
+}
+
+.paragraph{
+    color: $white;
+    padding-bottom: 1.5rem;
+
+    @include responsive__mode(phone){
+        padding: 0 3rem 1.5rem 3rem;
+    }
+
+    &-1{
+        display: block;
+        @include responsive__mode(phone){
+            display: inline;
+        }
+    }
+
+    &-2{
+        display: block;
+        @include responsive__mode(phone){
+            display: inline;
+        }
+    }
+}
+
+.button{
+    text-decoration: none;
+    background-image: linear-gradient(115deg, $color-primary, $color-secondary);
+    border-radius: 50px;
+    color: $white;
+    padding: 0.5rem 3.5rem;
+    font-family: 'Raleway', sans-serif;
+    transition: all 0.3s;
+
+    &:hover,
+    &:active{
+        background-image: linear-gradient(115deg, $color-secondary, $color-primary);
+    }
+}
