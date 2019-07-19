@@ -10,7 +10,7 @@ $white: hsl(0, 0%, 100%);
 
 @mixin responsive__mode($breakpoint) {
     @if($breakpoint == phone){
-        @media only screen and (max-width: 31.25em){@content};
+        @media only screen and (max-width: 37.5em){@content};
     }
 
     @if($breakpoint == tablet-portrait){
